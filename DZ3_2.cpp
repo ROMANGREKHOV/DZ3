@@ -14,13 +14,18 @@ int main() {
 			: var2 >= var3
 				? var2 : var3
 	};
-
-	int otv2{ var1 >= var2
-			? var1 >= var3
-				? var3 : var1
-			: var2 >= var3
-				? var3 : var2
+	
+	int otv2{ var1 <= var2 
+		? var3 <= var1 
+			? var1 
+		: var3 >= var2 
+			? var2 : var3 
+		: var3 <= var2 
+			? var2 
+		: var3 >= var1 
+			? var1 : var3 
 	};
+
 
 	int otv3{ var1 <= var2
 			? var1 <= var3
@@ -32,3 +37,5 @@ int main() {
 	std::cout << otv1 << " " << otv2 << " " << otv3 << "\n\n\n\n";
 	return EXIT_SUCCESS;
 }
+
+
