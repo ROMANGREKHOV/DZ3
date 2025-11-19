@@ -35,7 +35,7 @@ int main() {
 	int var1, var2;
 	std::cout << "Введите первое число: ";
 	std::cin >> var1;
-	std::cout << "Введите первое число: ";
+	std::cout << "Введите второе число: ";
 	std::cin >> var2;
 	std::string str1, str2;
 
@@ -72,7 +72,10 @@ int main() {
 	
 	
 	//Сравнение
-	if (var1 < var2) {
+	if (-100<=var1<=100 || -100<=var2<=100){
+		std::cout << "Ошибка! Число(-ла) вне диапазона!" << "\n\n\n\n";
+	}
+	else if (var1 < var2) {
 		std::cout << str1 << " меньше чем " << str2 << "\n\n\n\n";
 	}
 	else if (var1>var2) {
@@ -81,8 +84,6 @@ int main() {
 	else if (var1 == var2) {
 		std::cout << str1 << " равно " << str2 << "\n\n\n\n";
 	}
-	else {
-		std::cout << "Ошибка! Одно из чисел вне диапазона!" << "\n\n\n\n";
-	}
+	
 	return EXIT_SUCCESS;
 }
