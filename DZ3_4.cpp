@@ -1,7 +1,7 @@
 #include <iostream>
 
 int main() {
-	std::string ones[] = { "",
+	std::string ones[] = { "ноль",
 	"один",
 	"два",
 	"три",
@@ -72,7 +72,7 @@ int main() {
 	
 	
 	//Сравнение
-	if (-100<=var1<=100 || -100<=var2<=100){
+	if (-100>var1 || var1>100 || -100>var2 || var2>100){
 		std::cout << "Ошибка! Число(-ла) вне диапазона!" << "\n\n\n\n";
 	}
 	else if (var1 < var2) {
